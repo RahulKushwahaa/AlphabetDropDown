@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script>
+        var EAlphabet1=[
+            ["Select","Select","Select","Select","Select","Select","Select","Select"],
+            ["A (a)","Apple -","सेब","apple.jpg","A (a)","Ant -","चींटी","Ant.jpg"],
+            ["B (b)","Ball -","गेंद","ball.jpg","B (b)","Bat -","बल्ला","bat.png"],
+            ["C (c)","Cat -","बिल्ली","cat.jpg","C (c)","Car -","गाड़ी","Car.png"],
+            ["D (d)","Dog -","कुत्ता","dog.jpg","D (d)","Duck -","बत्तख","duck.jpg"],
+            ["E (e)","Elephant -","हाथी","elephant.jpg","E (e)","Earth -","धरती","Earth.jpg"],
+            ["F (f)","Fish -","मछली","fish.jpg","F (f)","Frog -","मेंढक","Frog.jpg"],
+            ["G (g)","Goat -","बकरी","goat.jpg","G (g)","Girl -","लड़की","Girl.jpg"],
+            ["H (h)","Hen -","मुर्गी","hen.jpg","H (h)","House","घर","House.jpg"],
+            ["I (i)","Ice-Cream -","बर्फ","ice-cream.jpg","I (i)","Ink-Pot -" ,"दावात","InkPot.jpg"],
+            ["J (j)","Jug -","जग","jug.jpg","J (j)","Joker -","जोकर","joker.jpg"],
+            ["K (k)","King -","राजा","king.jpg","k (k)","Kite -","पतंग","Kite.jpg"],
+            ["L (l)","Lion -","शेर","lion.jpg","L (l)","Lamp -","लैंप","Lamp.jpg"],
+            ["M (m)","Monkey -","बंदर","monkey.jpg","M (m)","Mango -","आम","Mango.jpg"],
+            ["N (n)","Nest -","घोंसला","nest.jpg","N (n)","Net -","जाल","Net.png"],
+            ["O (o)","Orange -","संतरा","orange.jpg","O (o)","Owl -","उल्लू","Owl.jpg"],
+            ["P (p)","Parrot -","तोता","parrot.jpg","P (p)","Pen -","कलम","Pen.jpg"],
+            ["Q (q)","Queen -","रानी","queen.jpg","Q (q)","Quail -","बटेर","Quail.jpg"],
+            ["R (r)","Rose -","गुलाब","rose.jpg","R (r)","Rabbit -","खरगोश","Rabbit.jpg"],
+            ["S (s)","Ship -","जहाज","ship.jpg","S (s)","Star -","सितारा","Star.jpg"],
+            ["T (t)","Tiger -","बाघ","tiger.jpg","T (t)","Tree -","पेड़","Tree.jpg"],
+            ["U (u)","Umberalla -","छाता","umberalla.jpg","U (u)","Unicorn -","एक तंगावाला","Unicorn.png"],
+            ["V (v)","Violin -","वायोलिन","Violin.png","V (v)","van -","गाड़ी","van.jpg"],
+            ["W (w)","Watch -","घड़ी","watch.jpg","W (w)","Window -","खिड़की","Window.jpg"],
+            ["X (x)","Xylophone -","सिलाफ़न","xylophone.jpg","X (x)","X-ray -","एक्स-रे","xray.jpg"],
+            ["Y (y)","Yak -","याक","yak.jpg","Y (y)","Yacht -","नौका","Yacht.jpg"],
+            ["Z (z)","Zebra -","ज़ेबरा","zebra.jpg","Z (z)","Zip -","ज़िप","Zip.jpg"],
+            ];
+        
+        function Alphabet()
+        {
+            //show English Alphabet info Area
+            var d=document.getElementById("EAlphabet");
+            d.style.display="block";
+            
+            var options="";
+            var i;
+            for(i=0;i<EAlphabet1.length;i+=1)
+            {
+                options=options+"<option value=\""+i+'">'+EAlphabet1[i][0]+'</option>';
+            }
+
+            document.getElementById("EAlphabet1").innerHTML=options;
+        }
+
+        function Alphabet1()
+        {
+            //Get The Selected Item Value
+            var selectedAlphabetIndex=parseInt(document.getElementById("EAlphabet1").value);
+            
+            document.getElementById("abcd").innerHTML=EAlphabet1[selectedAlphabetIndex][0];
+            document.getElementById("en").innerHTML=EAlphabet1[selectedAlphabetIndex][1];
+            document.getElementById("hn").innerHTML=EAlphabet1[selectedAlphabetIndex][2];
+            document.getElementById("image").innerHTML="<img src=\""+EAlphabet1[selectedAlphabetIndex][3]+"\">";
+            document.getElementById("ABCD").innerHTML=EAlphabet1[selectedAlphabetIndex][4];
+            document.getElementById("En").innerHTML=EAlphabet1[selectedAlphabetIndex][5];
+            document.getElementById("Hn").innerHTML=EAlphabet1[selectedAlphabetIndex][6];
+            document.getElementById("Image").innerHTML="<img src=\""+EAlphabet1[selectedAlphabetIndex][7]+"\">";
+        }
+    </script>
+
+    <style>
+         img
+        {
+           height: 200px; 
+           width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button class="btn btn-primary" onclick="Alphabet();">English Alphabet</button>
+            </div>
+        </div>
+        <div id="EAlphabet" style="display: none;">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <select id="EAlphabet1" class="form-control form-control-lg" onchange="Alphabet1();"></select>
+                </div>
+            </div><hr/>
+            <div class="row">
+                <div class="col-sm-1 text-center">
+                    <b>Alphabet</b><hr/>
+                    <h1 id="abcd">ABCD</h1>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <b>English Name </b><hr/>
+                    <h1 id="en">Name</h1>
+                </div>
+                <div class="col-sm-1 text-center">
+                    <b>Hindi Name</b><hr/>
+                    <h1 id="hn">Name</h1>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <b>Image</b><hr/>
+                    <h1 id="image">Image</h1>
+                </div>
+
+
+                <div class="col-sm-1 text-center">
+                    <b>Alphabet</b><hr/>
+                    <h1 id="ABCD">ABCD</h1>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <b>English Name </b><hr/>
+                    <h1 id="En">Name</h1>
+                </div>
+                <div class="col-sm-1 text-center">
+                    <b>Hindi Name</b><hr/>
+                    <h1 id="Hn">Name</h1>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <b>Image</b><hr/>
+                    <h1 id="Image">Image</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
